@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>introduction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 66.66%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background: none;
+            color: #333;
+            padding: 20px 0;
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .header p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+
+        .navbar, .about-us, .company-profile {
+            background: linear-gradient(135deg, #00bfff, #87cefa);
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .navbar a, .about-us a, .company-profile a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover, .about-us a:hover, .company-profile a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar a.active, .about-us a.active, .company-profile a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .featured-products {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            gap: 20px;
+        }
+
+        .featured-products img {
+            width: 48%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .featured-products img:hover {
+            transform: translateY(-5px);
+        }
+
+        /* 修改后的About Us内容区样式 */
+        .about-content {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            text-align: justify;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-images {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .horizontal-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .vertical-images {
+            flex: 1;
+            display: flex;
+            gap: 15px;
+        }
+
+        .about-images img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            object-fit: contain; /* 改为contain避免裁剪 */
+            background-color: #f5f5f5; /* 为透明区域添加背景色 */
+        }
+
+        .horizontal-images img {
+            width: 100%;
+            height: auto;
+            max-height: 250px; /* 控制横图最大高度 */
+        }
+
+        .vertical-images img {
+            width: 50%;
+            height: auto;
+            max-height: 500px; /* 控制竖图最大高度 */
+        }
+
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .about-images {
+                flex-direction: column;
+            }
+            .vertical-images {
+                flex-direction: column;
+            }
+            .vertical-images img {
+                width: 100%;
+            }
+        }
+
+        .company-content {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .company-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 16px;
+        }
+
+        .company-table tr {
+            border-bottom: 1px solid #eee;
+        }
+
+        .company-table td {
+            padding: 12px 15px;
+            vertical-align: top;
+        }
+
+        .company-table td:first-child {
+            font-weight: bold;
+            width: 30%;
+            color: #333;
+        }
+
+        .company-table td:last-child {
+            color: #666;
+        }
+
+        .verified-icon {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Ningbo Wenzhuo Plastic Products Factory</h1>
+        <p>Hose nozzles & Hose connectors, Pet tools ...</p>
+    </div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="introduction.html" class="active">Introduction</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="Ebook.html">Ebook</a>
+    </div>
+    <div class="featured-products">
+        <img src="12.jpg" alt="产品1">
+        <img src="11.jpg" alt="产品2">
+    </div>
+
+    <!-- 修改后的About Us部分 -->
+    <div class="about-us">
+        <a class="active">About Us</a>
+    </div>
+    <div class="about-content">
+        <div class="about-text">
+            <p>Founded in 2000, we began as a small mold workshop serving nearby hardware and plastic factories, mainly undertaking partial mold development projects.
+                Through years of continuous technical advancement, we have grown into a full-process mold solution provider with comprehensive capabilities —
+                from customer requirement analysis, mold design, mold processing, assembly, and testing, to providing complete after-sales and maintenance services.
+                In particular, we have over 20 years of specialized R&D experience in the field of plastic water guns, with extensive expertise in fluid control and ergonomic design.</p>
+            <p>Since 2021, we have expanded into the manufacturing of finished plastic water guns. After four years of development,
+                our factory has established mature capabilities in injection molding, assembly, and product testing, enabling full-process quality control and traceability —
+                from steel plates to molds, and from raw plastic materials to finished products.</p>
+            <p>We offer our clients a wide range of ODM/OEM options: customization of existing products (e.g., custom colors, engraving, and patterns)
+                as well as full-solution development — from design to mass production, including both mold development and product manufacturing.</p>
+            </div>
+
+        <div class="about-images">
+            <!-- 左侧：横图区域（上下排列） -->
+            <div class="horizontal-images">
+                <img src="1.jpg" alt="横图1">
+                <img src="2.jpg" alt="横图2">
+            </div>
+
+            <!-- 右侧：竖图区域（左右排列） -->
+            <div class="vertical-images">
+                <img src="3.jpg" alt="竖图1">
+                <img src="4.jpg" alt="竖图2">
+            </div>
+        </div>
+    </div>
+
+    <!-- 新增的Company Profile部分 -->
+    <div class="company-profile">
+        <a class="active">Company Profile</a>
+    </div>
+    <div class="company-content">
+        <table class="company-table">
+            <tr>
+                <td>Company:</td>
+                <td>Yuyao Wenzhuo Plastic Products Factory<br>余姚文卓塑料制品厂</td>
+            </tr>
+            <tr>
+                <td>Region:</td>
+                <td>China</td>
+            </tr>
+            <tr>
+                <td>Capital:</td>
+                <td>200000 CNY</td>
+            </tr>
+            <tr>
+                <td>Year Established:</td>
+                <td>2020</td>
+            </tr>
+            <tr>
+                <td>Verified:</td>
+                <td class="verified-icon">📱 📄 🏢 💻</td>
+            </tr>
+            <tr>
+                <td>Deposit:</td>
+                <td>Paid: 0.00 US</td>
+            </tr>
+            <tr>
+                <td>Main Products:</td>
+                <td>Hose nozzles & Hose connectors, Pet tools, ODM, OEM...</td>
+            </tr>
+            <tr>
+                <td>Business Type:</td>
+                <td>Manufacturer</td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>
