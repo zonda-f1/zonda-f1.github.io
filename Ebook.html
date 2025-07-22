@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ebook</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      width: 66.66%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .header {
+      background: none;
+      color: #333;
+      padding: 20px 0;
+      text-align: left;
+      margin: 20px 0;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 2.5em;
+    }
+
+    .header p {
+      margin: 5px 0;
+      font-size: 1.2em;
+    }
+
+    .navbar, .ebook-title {
+      background: linear-gradient(135deg, #00bfff, #87cefa);
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+    }
+
+    .navbar a, .ebook-title a {
+      float: left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover, .ebook-title a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .navbar a.active, .ebook-title a.active {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .featured-products {
+      display: flex;
+      justify-content: space-between;
+      margin: 30px 0;
+      gap: 20px;
+    }
+
+    .featured-products img {
+      width: 48%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .featured-products img:hover {
+      transform: translateY(-5px);
+    }
+
+    .ebook-content {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+    }
+
+    .ebook-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .ebook-item {
+      text-align: center;
+      padding: 20px;
+      border-radius: 8px;
+      background: #f9f9f9;
+      transition: all 0.3s ease;
+    }
+
+    .ebook-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .ebook-cover {
+      width: 100%;
+      height: auto;      /* 高度自动适应 */
+      max-height: 180px;  /* 限制最大高度 */
+      object-fit: contain; /* 保持比例完整显示 */
+      border-radius: 5px;
+      background-color: #f5f5f5; /* 添加背景色填充空白区域 */
+    }
+
+    .ebook-title-text {
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #0066cc;
+    }
+
+    .ebook-description {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      padding: 8px 20px;
+      background: linear-gradient(135deg, #00bfff, #0084ff);
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 132, 255, 0.3);
+    }
+
+    @media (max-width: 1024px) {
+      .ebook-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .ebook-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Ningbo Wenzhuo Plastic Products Factory</h1>
+    <p>Hose nozzles & Hose connectors, Pet tools ...</p>
+  </div>
+
+  <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="introduction.html">Introduction</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+    <a href="Ebook.html" class="active">Ebook</a>
+  </div>
+
+  <div class="featured-products">
+    <img src="12.jpg" alt="Featured Product 1">
+    <img src="11.jpg" alt="Featured Product 2">
+  </div>
+
+  <div class="ebook-title">
+    <a href="Ebook.html" class="active">Product Catalogs</a>
+  </div>
+
+  <div class="ebook-content">
+    <div class="ebook-grid">
+      <div class="ebook-item">
+        <img src="start-page.png" alt="Garden Tools Catalog" class="ebook-cover">
+        <div class="ebook-title-text">Garden Tools Catalog 2025</div>
+        <div class="ebook-description">Complete collection of our garden tool products with specifications</div>
+        <a href="version3.pdf" class="download-btn">Download PDF</a>
+      </div>
+  </div>
+</div>
+</body>
+</html>
