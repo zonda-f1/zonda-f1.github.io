@@ -1,9 +1,197 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* White background */
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 66.66%; /* 4/6 of the screen width */
+            max-width: 1200px; /* Optional: limit the maximum width */
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background: none; /* No background color */
+            color: #333;
+            padding: 20px 0;
+            text-align: left; /* Align text to the left */
+            margin: 20px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .header p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+
+        .navbar, .hot-products, .about-us {
+            background: linear-gradient(135deg, #00bfff, #87cefa); /* Gradient from sky blue to light sky blue */
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .navbar a, .hot-products a, .about-us a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+        }
+
+        .navbar a:hover, .hot-products a:hover, .about-us a:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter background on hover */
+        }
+
+        .navbar a.active, .hot-products a.active, .about-us a.active {
+            background-color: rgba(255, 255, 255, 0.3); /* Active page indicator */
+        }
+
+        .featured-products {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            gap: 20px;
+        }
+
+        .featured-products img {
+            width: 48%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .featured-products img:hover {
+            transform: translateY(-5px);
+        }
+
+        .hot-products, .about-us {
+            margin: 20px 0;
+        }
+
+        .hot-products h2, .about-us h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .hot-products img {
+            width: 32%; /* 32% of the container width */
+            height: auto;
+            margin: 0 1%; /* 1% margin on both sides */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-box1 {
+            display: flex; /* 使用 flex 布局 */
+            justify-content: space-between; /* 均匀分布图片 */
+            align-items: center; /* 垂直居中 */
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-box1 img {
+            width: 30%; /* 设置图片宽度为30%，留出间距 */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .about-content {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex; /* 使用flex布局 */
+            gap: 20px; /* 文字和图片之间的间距 */
+        }
+
+        .about-text {
+            flex: 2; /* 文字占2/3 */
+            text-align: justify;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .about-image {
+            flex: 1; /* 图片占1/3 */
+            display: flex;
+            align-items: center; /* 垂直居中 */
+            justify-content: center; /* 水平居中 */
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
-                  
-<img src="1.png"   width="2000" height="10000">
+<div class="container">
+    <div class="header">
+        <h1>Ningbo Wenzhuo Plastic Products Factory</h1>
+        <p>Hose nozzles & Hose connectors, Pet tools ...</p>
+    </div>
+    <div class="navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="Ebook.html">Ebook</a>
+    </div>
+    <div class="featured-products">
+        <img src="12.jpg" alt="产品1">
+        <img src="11.jpg" alt="产品2">
+    </div>
+    <div class="hot-products">
+        <a href="hotproducts.html" class="active">Hot Products</a>
+    </div>
+    <div class="content-box1">
+        <img src="yellow.png" alt="热门产品1">
+        <img src="green.png" alt="热门产品2">
+        <img src="blue.png" alt="热门产品3">
+    </div>
+    <div class="about-us">
+        <a href="aboutus.html" class="active">About Us</a>
+    </div>
+    <div class="about-content">
+        <div class="about-text">
+            <p>Wenzhuo is a professional lawn and garden sprinkler manufacturer. And our factories located in Ningbo of China. Our product range includes Hose Nozzle, Hose Connector etc. and more which have been marketed in the North America, Europe, Australia and many of other countries.</p>
+            <p>With an outstanding R&D team and complete production equipment such as plastic injection machines, mold processing machine tools. Customer'’s order we will handle it all inside of our factory in private. From technical function and shape design then the tooling opening and the final sprinkler produce which through an integrated operation making Wenzhuo as your best ODM choice.</p>
+            <p>All of our products are available in various specifications to meet customer's requirements. So don' t wait and come to WENZHU0 today which we will offer the best quality at the competitive prices to you.</p>
+        </div>
 
+        <div class="about-image">
+            <img src="5.jpg" alt="Company or Product Image">
+        </div>
+    </div>
+</div>
 </body>
 </html>
