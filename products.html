@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公司首页</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            width: 66.66%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background: none;
+            color: #333;
+            padding: 20px 0;
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .header p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+
+        .navbar, .products {
+            background: linear-gradient(135deg, #00bfff, #87cefa);
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        .navbar a, .products a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar a:hover, .products a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar a.active, .products a.active {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .featured-products {
+            display: flex;
+            justify-content: space-between;
+            margin: 30px 0;
+            gap: 20px;
+        }
+
+        .featured-products img {
+            width: 48%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .featured-products img:hover {
+            transform: translateY(-5px);
+        }
+
+        .products {
+            margin: 20px 0;
+        }
+
+        .products h2 {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .product-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background: white;
+        }
+
+        .product-item {
+            text-align: center;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product-item img:hover {
+            transform: scale(1.05);
+        }
+
+        .product-name {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 1024px) {
+            .product-gallery {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .product-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>Ningbo Wenzhuo Plastic Products Factory</h1>
+        <p>Hose nozzles & Hose connectors, Pet tools ...</p>
+    </div>
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="introduction.html">Introduction</a>
+        <a href="products.html" class="active">Products</a>
+        <a href="contact.html">Contact</a>
+        <a href="Ebook.html">Ebook</a>
+    </div>
+    <div class="featured-products">
+        <img src="12.jpg" alt="产品1">
+        <img src="11.jpg" alt="产品2">
+    </div>
+    <div class="products">
+        <a href="products.html" class="active">Products</a>
+    </div>
+    <div class="product-gallery">
+        <!-- 第一行产品 -->
+        <div class="product-item">
+            <img src="yellow.png" alt="Product 1">
+            <div class="product-name">Hose Nozzle A</div>
+        </div>
+        <div class="product-item">
+            <img src="green.png" alt="Product 2">
+            <div class="product-name">Hose Nozzle B</div>
+        </div>
+        <div class="product-item">
+            <img src="blue.png" alt="Product 3">
+            <div class="product-name">Hose Nozzle C</div>
+        </div>
+        <div class="product-item">
+            <img src="black.png" alt="Product 4">
+            <div class="product-name">Hose Nozzle D</div>
+        </div>
+
+        <!-- 第二行产品 -->
+        <div class="product-item">
+            <img src="connection-1.png" alt="Product 5">
+            <div class="product-name">Hose Connector A</div>
+        </div>
+        <div class="product-item">
+            <img src="connection2.png" alt="Product 6">
+            <div class="product-name">Hose Connector B</div>
+        </div>
+        <div class="product-item">
+            <img src="connection3.png" alt="Product 7">
+            <div class="product-name">Hose Connector C</div>
+        </div>
+        <div class="product-item">
+            <img src="connection4.png" alt="Product 8">
+            <div class="product-name">Hose Connector D</div>
+        </div>
+
+
+    </div>
+</div>
+</body>
+</html>
